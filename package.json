@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@nestjs/passport": "^10.0.3",
-    "passport": "^0.7.0",
-    "passport-azure-ad": "^4.3.5"
-  }
-}
