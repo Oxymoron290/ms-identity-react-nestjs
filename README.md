@@ -8,3 +8,6 @@ Built in Node v20.12.2
 
 - `npx @nestjs/cli new backend`
 - `npx create-react-app frontend`
+- install necessary packages
+  - Frontend: `npm install @azure/msal-react @azure/msal-browser`
+  - Backend: `npm install @nestjs/passport passport passport-azure-ad`
