@@ -11,3 +11,8 @@ Built in Node v20.12.2
 - install necessary packages
   - Frontend: `npm install @azure/msal-react @azure/msal-browser`
   - Backend: `npm install @nestjs/passport passport passport-azure-ad`
+- Wire up Backend
+  - Create `src/auth/auth.module.ts` - Organizes all authentication related features.
+  - Create `src/auth/auth.service.ts` - Provides a service to validate users, which can be extended based on your business logic.
+  - Create `src/auth/azure.strategy.ts` -  Implements the OAuth bearer strategy using Azure AD. Here, you configure your Azure AD client details and the token validation process. The validate() function is used to authenticate and authorize the user each time a protected route is accessed.
+  - modify `src/app.module.ts` - Import your AuthModule into the main application module.
