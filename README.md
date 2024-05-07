@@ -6,5 +6,5 @@ Built in Node v20.12.2
 
 # Steps:
 
-- `npx nestjs new backend`
+- `npx @nestjs/cli new backend`
 - `npx create-react-app frontend`
