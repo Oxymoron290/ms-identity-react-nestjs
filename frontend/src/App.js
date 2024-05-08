@@ -1,8 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import { useIsAuthenticated, useMsal } from '@azure/msal-react';
-import { loginRequest } from './utils/authConfig';
+import { loginRequest } from './authConfig';
 import AuthenticatedComponent from './components/AuthenticatedComponent';
+import Orders from './components/Orders';
+import BakeryMenu from './components/BakeryMenu';
 
 function App() {
   const { instance } = useMsal();
@@ -17,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Menu />
+        <BakeryMenu />
         {isAuthenticated && <Orders />}
         <hr />
         {isAuthenticated ? (

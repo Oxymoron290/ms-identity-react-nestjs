@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useMsal } from '@azure/msal-react';
 import { fetchOrders } from '../api/apiClient';
-import { loginRequest } from '../utils/authConfig';
+import { loginRequest } from '../authConfig';
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
