@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000'; // Adjust as necessary for your backend URL
+const BASE_URL = 'http://localhost:3001'; // Adjust as necessary for your backend URL
 
 export const fetchMenu = async () => {
   const response = await fetch(`${BASE_URL}/menu`);
