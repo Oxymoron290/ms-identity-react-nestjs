@@ -21,7 +21,7 @@ function App() {
       <header className="App-header">
         <BakeryMenu />
         {isAuthenticated && <Orders />}
-        <hr />
+        <hr style={{width: '50%'}} />
         {isAuthenticated ? (
           <AuthenticatedComponent />
         ) : (
