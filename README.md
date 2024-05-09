@@ -74,7 +74,7 @@ To acheive this we will configure the OAuth settings in Azure without a client s
     - Click on "New registration" at the top.
     - Enter a name for your application.
     - Choose who can use the application. For testing, you can select "Accounts in this organizational directory only".
-    - Under the Redirect URI, add the URI where your React app will be running plus any specific path needed for the auth response. For example, if your React app is running locally on port 3000, you might add `http://localhost:3000`
+    - Under the Redirect URI, Select "Single-page Application (SPA)" and add the URI where your React app will be running plus any specific path needed for the auth response. For example, if your React app is running locally on port 3000, you might add `http://localhost:3000`
 1. Obtain Application (Client) ID and Directory (Tenant) ID
     - After the application is registered, Azure will direct you to the application's overview page where you can find the Application (client) ID and Directory (tenant) ID. Note these down as they will be required in your application's configuration files.
 1. Update Your Frontend Configuration

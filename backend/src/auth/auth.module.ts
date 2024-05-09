@@ -4,7 +4,7 @@ import { AuthService } from './auth.service';
 import { AzureStrategy } from './azure.strategy';
 
 @Module({
-  imports: [PassportModule.register({ defaultStrategy: 'oauth-bearer' })],
+  imports: [PassportModule.register({ defaultStrategy: 'azure-ad' })],
   providers: [AuthService, AzureStrategy],
   exports: [AuthService]
 })

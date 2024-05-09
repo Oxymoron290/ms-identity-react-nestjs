@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { PassportStrategy } from '@nestjs/passport';
+import { AuthGuard, PassportStrategy } from '@nestjs/passport';
 import { BearerStrategy, ITokenPayload } from 'passport-azure-ad';
 import { AuthService } from './auth.service';
 
 @Injectable()
-export class AzureStrategy extends PassportStrategy(BearerStrategy, 'oauth-bearer') {
+export class AzureStrategy extends PassportStrategy(BearerStrategy, 'azure-ad') {
   constructor(private authService: AuthService) {
     super({
       identityMetadata: `https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0/.well-known/openid-configuration`,
@@ -25,3 +25,5 @@ export class AzureStrategy extends PassportStrategy(BearerStrategy, 'oauth-beare
     return user;
   }
 }
+
+export const AzureADGuard = AuthGuard('azure-ad');
